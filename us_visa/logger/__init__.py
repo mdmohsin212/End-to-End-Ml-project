@@ -8,7 +8,8 @@ LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 dir = "logs"
 
 logs_path = os.path.join(from_root(), dir, LOG_FILE)
-os.makedirs(logs_path, exist_ok=True)
+
+os.makedirs(dir, exist_ok=True)
 
 logging.basicConfig(
     filename=logs_path,
